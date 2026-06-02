@@ -1,0 +1,150 @@
+<!-- prettier-ignore -->
+{% extends "base.html" %} {% load static %} {% block style %} <link
+rel="stylesheet" href="{% static "css/pelayanan.css" %}"> <link rel="stylesheet"
+href="{% static "vendor/bootstrap.css" %}">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+{% endblock style %} {% block content %}
+<div id="header" class="relative text-[#fff]">
+  <img src="{% static "img/bg-sirani.png" %}" alt="" class="w-full h-[300px]
+  object-cover">
+  <div class="absolute bg-[#2577B4] w-full h-[300px] top-0 opacity-25"></div>
+  <h1 class="absolute lg:top-30 top-20 left-20 lg:w-[60%] w-[70%] text-[#003c69]">Sertifikasi Perangkat Telekomunikasi</h1>
+  <p class="absolute lg:top-45 top-40 left-20 text-justify lg:w-[50%] w-[70%]">SIRANI (Aplikasi Mobile Sertifikasi Perangkat Telekomunikasi) adalah aplikasi resmi dari Ditjen SDPPI Kementrian Komunikasi dan Digital.
+</p>
+</div>
+<!-- prettier-ignore -->
+{% block title %}
+<div class="w-full h-[70px] bg-[#002846] flex items-center lg:pl-15 pl-10">
+  <ul class="flex text-[#fff] m-0 gap-3">
+    <li>Home</li>
+    <li>/</li>
+    <li>Profiles</li>
+    <li>/</li>
+    <li>{{title.5}}</li>
+  </ul>
+</div>
+{% endblock title %}
+<div id='serena-content' class="bg-[#9ac2e5]">
+  <div class="text-[#000] pb-10">
+      <div class="lg:mx-20 mx-10 pt-10 border-b-2 border-white">
+        <div class="bg-[#2577B4] p-1 lg:w-[40%] text-center rounded">
+            <h3 class="m-0">Fitur dan Fungsi Utama Sirani</h3>
+        </div>
+        <div class="mt-2">
+            <ul class="list-disc text-justify">
+                <li>Pengecekan Sertifikat: Memastikan alat atau perangkat telekomunikasi telah disertifikasi secara resmi oleh SDPPI Ditjen SDPPI.</li>
+                <li>Informasi Sertifikasi: Menyediakan daftar sertifikat, detail teknis, dan informasi terkait proses sertifikasi.</li>
+                <li>Balai Uji & Tarif: Memberikan informasi mengenai lokasi balai uji dan biaya (tarif) sertifikasi perangkat.</li>
+                <li>Dukungan perizinan: Terintegrasi dengan sistem perizinan online terpadu One Single Submission (OSS) Komdigi.</li>
+            </ul>
+        </div>
+      </div>
+      <div id="ketentuan-serena" class="lg:mx-20 mx-10 mt-4 bg-[#2577B4] text-[#fff] p-4 relative lg:block">
+        <div class="lg:flex justify-between">
+            <div class="w-full text-center">
+                <h3 class="m-0 mb-3">Tampilan Aplikasi SIRANI</h3>
+                <div class="lg:flex hidden justify-center gap-4">
+                    <img src="{% static "img/sirani1.png" %}" alt="" class="w-[200px]">
+                    <img src="{% static "img/sirani2.png" %}" alt="" class="w-[200px]">
+                </div>
+            </div>
+            <div class="ketentuan w-full lg:mt-11 text-justify lg:pr-5">
+                <p>SIRANI adalah aplikasi mobile yang dirancang untuk mempermudah pengguna dalam mengakses informasi terkait proses sertifikasi perangkat telekomunikasi. Aplikasi ini menyediakan berbagai fitur yang mendukung pengguna dalam menemukan informasi yang dibutuhkan dengan cepat dan efisien. Dengan tampilan antarmuka yang ramah pengguna, SIRANI memfasilitasi pencarian informasi yang relevan dan akurat, sehingga pengguna dapat memahami langkah-langkah yang diperlukan dalam proses sertifikasi.</p>
+                <a href="https://play.google.com/store/apps/details?id=id.go.postel.sirani">
+                  <button class="bg-[#F7B117] py-2 px-4">Download SIRANI</button>
+                </a>
+            </div>
+            <div class="w-full text-center mt-4 lg:hidden">
+                <div class="lg:hidden flex justify-center gap-4">
+                    <img src="{% static "img/sirani1.png" %}" alt="" class="w-[150px]">
+                    <img src="{% static "img/sirani2.png" %}" alt="" class="w-[150px]">
+                </div>
+            </div>
+        </div>
+        <img src="{% static "img/logo-sirani.png" %}" alt="" class="absolute lg:w-[200px] w-[150px] top-[-50px] right-0 ">
+      </div>
+  </div>
+</div>
+{% endblock content %} {% block script %}
+<script>
+  const navLinks = document.querySelector(".nav-links");
+  function onToggleMenu(e) {
+    e.name = e.name === "menu-outline" ? "close-outline" : "menu-outline";
+    navLinks.classList.toggle("invisible");
+  }
+</script>
+
+<script>
+  const navLinks2 = document.querySelector(".nav-links2");
+  function onToggleMenu2(e) {
+    e.name == "menu-outline2"
+    navLinks2.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks3 = document.querySelector(".nav-links3");
+  function onToggleMenu3(e) {
+    e.name == "menu-outline3"
+    navLinks3.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks4 = document.querySelector(".nav-links4");
+  function onToggleMenu4(e) {
+    e.name == "menu-outline4"
+    navLinks4.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks5 = document.querySelector(".nav-links5");
+  function onToggleMenu5(e) {
+    e.name == "menu-outline5"
+    navLinks5.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks6 = document.querySelector(".nav-links6");
+  function onToggleMenu6(e) {
+    e.name == "menu-outline6"
+    navLinks6.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks7 = document.querySelector(".nav-links7");
+  function onToggleMenu7(e) {
+    e.name == "menu-outline7"
+    navLinks7.classList.toggle("hidden");
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="{% static "vendor/bootstrap.js" %}">
+<script
+  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+  integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+  crossorigin="anonymous"
+></script>
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
+
+{% endblock script %}

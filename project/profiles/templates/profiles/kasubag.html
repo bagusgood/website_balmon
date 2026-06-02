@@ -1,0 +1,165 @@
+<!-- prettier-ignore -->
+{% extends "base.html" %} {% load static %} {% block style %} <link
+rel="stylesheet" href="{% static "css/profiles.css" %}"> <link rel="stylesheet"
+href="{% static "vendor/bootstrap.css" %}">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+{% endblock style %} {% block content %}
+
+<div id="header" class="relative text-[#fff]">
+  <img src="{% static "img/bg-visiMisi.png" %}" alt="" class="w-full h-[300px]
+  object-cover">
+  <div class="absolute bg-[#2577B4] w-full h-[300px] top-0 opacity-50"></div>
+  <h3 class="absolute lg:text-center lg:top-25 top-10 lg:left-0 left-10 lg:w-full w-[80%]">Balai Monitor Spektrum Frekuensi Radio Kelas II Mataram</h3>
+  <h2 class="absolute lg:text-center lg:top-35 top-35 lg:left-0 left-10 text-justify lg:w-full w-[80%] text-[#fff]">"SUBBAGIAN UMUM"</h2>
+</div>
+
+<!-- prettier-ignore -->
+{% block title %}
+<div class="w-full h-[70px] bg-[#002846] flex items-center pl-15">
+  <ul class="flex text-[#fff] m-0 gap-3">
+    <li>Home</li>
+    <li>/</li>
+    <li>Profiles</li>
+    <li>/</li>
+    <li>{{title.0}}</li>
+  </ul>
+</div>
+{% endblock title %}
+<div class="bg-gradient-to-br from-[#00508c] to-[#2577B4]">
+  <div class="h-screen w-full bg-[linear-gradient(to_bottom,rgba(0,0,0,0.75)_100%,rgba(0,0,0,0.2)),url({% static "img/tim-kasubag.png" %})] bg-cover bg-center pt-5">
+    <div class="bg-[rgba(255,255,255,0.25)] text-[#fff] mx-auto w-1/2 px-10 py-3 rounded-xl">
+      <div class="flex items-center gap-3">
+        <i class="fa-solid fa-list-check fa-xl"></i>
+        <h3 class="m-0" style="font-weight:bold">Lingkup Tugas</h3>
+      </div>
+      <p class="m-0 pt-2">Melakukan perencanaan dan program, urusan keuangan, kepegawaian, ketatauashaan, perlengkapan, kerumahtanggaan, dan hubungan masyarakat, serta penyusunan evaluasi dan pelaporan</p>
+    </div>
+</div>
+</div>
+{% endblock content %} {% block script %}
+<script>
+  const navLinks = document.querySelector(".nav-links");
+  function onToggleMenu(e) {
+    e.name = e.name === "menu-outline" ? "close-outline" : "menu-outline";
+    navLinks.classList.toggle("invisible");
+  }
+</script>
+
+<script>
+  const navLinks2 = document.querySelector(".nav-links2");
+  function onToggleMenu2(e) {
+    e.name == "menu-outline2"
+    navLinks2.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks3 = document.querySelector(".nav-links3");
+  function onToggleMenu3(e) {
+    e.name == "menu-outline3"
+    navLinks3.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks4 = document.querySelector(".nav-links4");
+  function onToggleMenu4(e) {
+    e.name == "menu-outline4"
+    navLinks4.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks5 = document.querySelector(".nav-links5");
+  function onToggleMenu5(e) {
+    e.name == "menu-outline5"
+    navLinks5.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks6 = document.querySelector(".nav-links6");
+  function onToggleMenu6(e) {
+    e.name == "menu-outline6"
+    navLinks6.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks7 = document.querySelector(".nav-links7");
+  function onToggleMenu7(e) {
+    e.name == "menu-outline7"
+    navLinks7.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Elemen-elemen yang diperlukan
+    const thumbnail = document.getElementById("thumbnail-image");
+    const modal = document.getElementById("image-modal");
+    const modalImage = document.getElementById("modal-image");
+    const closeModal = document.getElementById("close-modal");
+
+    // Fungsi untuk membuka modal
+    function openModal() {
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      document.body.style.overflow = "hidden"; // Mencegah scroll
+    }
+
+    // Fungsi untuk menutup modal
+    function closeModalFunc() {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      document.body.style.overflow = "auto"; // Mengembalikan scroll
+    }
+
+    // Event listener untuk thumbnail
+    thumbnail.addEventListener("click", openModal);
+
+    // Event listener untuk tombol close
+    closeModal.addEventListener("click", closeModalFunc);
+
+    // Tutup modal ketika klik di luar gambar
+    modal.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        closeModalFunc();
+      }
+    });
+
+    // Tutup modal dengan tombol Escape
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && !modal.classList.contains("hidden")) {
+        closeModalFunc();
+      }
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="{% static "vendor/bootstrap.js" %}">
+<script
+  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+  integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+  crossorigin="anonymous"
+></script>
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
+
+{% endblock script %}

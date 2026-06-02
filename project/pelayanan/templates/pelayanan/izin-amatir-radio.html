@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+<!-- prettier-ignore -->
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static "css/pelayanan.css" %}">
+<link rel="stylesheet" href="{% static "vendor/bootstrap.css" %}">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+<link href="https://db.onlinewebfonts.com/c/85969c0f53ef6a4eddee59ec6ebaaabd?family=Rosella+W01+Solid" rel="stylesheet">
+{% endblock style %}
+{% block content %}
+<div id="header" class="relative text-[#fff]">
+  <div class="w-full h-[300px] bg-[#2577B4] flex lg:items-center items-end justify-around ">
+    <img src="{% static "img/tower.png" %}" alt="" class="lg:h-full h-1/2 z-19">
+    <h2 class="z-19 lg:pb-0 pb-22 text-center">Izin Amatir Radio & IKRAP</h2>
+    <img src="{% static "img/tower.png" %}" alt="" class="lg:h-full h-1/2 z-19">
+  </div>
+  <img src="{% static "img/gedung.png" %}" alt="" class="absolute h-[200px] bottom-0 left-10">
+  <img src="{% static "img/gelombang.png" %}" alt="" class="absolute h-[200px] lg:top-12 top-15 lg:left-110 left-18">
+  <img src="{% static "img/gedung2.png" %}" alt="" class="absolute h-[200px] bottom-0 left-205">
+</div>
+{% block title %}
+<div class="w-full h-[70px] bg-[#002846] flex items-center pl-15">
+  <ul class="flex text-[#fff] m-0 gap-3">
+    <li>Home</li>
+    <li>/</li>
+    <li>Profiles</li>
+    <li>/</li>
+    <li>{{title.0}}</li>
+  </ul>
+</div>
+{% endblock title %}
+
+<div class="relative bg-[rgba(37,119,180,0.75)]">
+  <div class="bg-[url({% static "img/bg-ht.png" %})] text-[#fff] w-full bg-cover bg-center">
+    <div id="izinAmatir" class="">
+      <h1 class="text-center pt-4">Izin Amatir Radio</h1>
+      <div class="lg:w-[60%] lg:mx-auto mx-10 bg-gradient-to-br from-[#00508c] to-[#2577B4] rounded-xl">
+        <div class="lg:flex px-5 py-5 items-center text-justify">
+          <img src="{% static "img/gambar-amatir.png" %}" alt="" class="w-[200px]">
+          <div class="lg:pl-5 lg:pt-0 pt-4">
+            <p >Izin untuk mendirikan, memiliki, mengoperasikan stasiun amatir radio dan menggunakan frekuensi radio pada alokasi yang telah ditentukan untuk radio amatir di Indonesia.</p>
+            <a href="https://iar-ikrap.postel.go.id/">
+              <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">Akses Disini</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="izinKomunikasi" class="pb-5">
+      <h1 class="text-center pt-4">Izin Komunikasi Radio Antar Penduduk (IKRAP)</h1>
+      <div class="lg:w-[60%] lg:mx-auto mx-10 bg-gradient-to-br from-[#00508c] to-[#2577B4] rounded-xl">
+        <div class="lg:flex px-5 py-5 items-center text-justify">
+          <img src="{% static "img/izin-komunikasi.png" %}" alt="" class="w-[200px] lg:hidden flex">
+          <div class="pr-5">
+            <p class="lg:pt-0 pt-4">Izin untuk mendirikan, memiliki, mengoperasikan stasiun amatir radio dan menggunakan frekuensi radio pada alokasi yang telah ditentukan untuk radio amatir di Indonesia.</p>
+            <a href="https://iar-ikrap.postel.go.id/">
+              <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">Akses Disini</button>
+            </a>
+          </div>
+          <img src="{% static "img/izin-komunikasi.png" %}" alt="" class="w-[200px] lg:flex hidden">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+{% block script %}
+<script>
+  const navLinks = document.querySelector(".nav-links");
+  function onToggleMenu(e) {
+    e.name = e.name === "menu-outline" ? "close-outline" : "menu-outline";
+    navLinks.classList.toggle("invisible");
+  }
+</script>
+
+<script>
+  const navLinks2 = document.querySelector(".nav-links2");
+  function onToggleMenu2(e) {
+    e.name == "menu-outline2"
+    navLinks2.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks3 = document.querySelector(".nav-links3");
+  function onToggleMenu3(e) {
+    e.name == "menu-outline3"
+    navLinks3.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks4 = document.querySelector(".nav-links4");
+  function onToggleMenu4(e) {
+    e.name == "menu-outline4"
+    navLinks4.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks5 = document.querySelector(".nav-links5");
+  function onToggleMenu5(e) {
+    e.name == "menu-outline5"
+    navLinks5.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks6 = document.querySelector(".nav-links6");
+  function onToggleMenu6(e) {
+    e.name == "menu-outline6"
+    navLinks6.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks7 = document.querySelector(".nav-links7");
+  function onToggleMenu7(e) {
+    e.name == "menu-outline7"
+    navLinks7.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Elemen-elemen yang diperlukan
+    const thumbnail = document.getElementById("thumbnail-image");
+    const modal = document.getElementById("image-modal");
+    const modalImage = document.getElementById("modal-image");
+    const closeModal = document.getElementById("close-modal");
+
+    // Fungsi untuk membuka modal
+    function openModal() {
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      document.body.style.overflow = "hidden"; // Mencegah scroll
+    }
+
+    // Fungsi untuk menutup modal
+    function closeModalFunc() {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      document.body.style.overflow = "auto"; // Mengembalikan scroll
+    }
+
+    // Event listener untuk thumbnail
+    thumbnail.addEventListener("click", openModal);
+
+    // Event listener untuk tombol close
+    closeModal.addEventListener("click", closeModalFunc);
+
+    // Tutup modal ketika klik di luar gambar
+    modal.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        closeModalFunc();
+      }
+    });
+
+    // Tutup modal dengan tombol Escape
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && !modal.classList.contains("hidden")) {
+        closeModalFunc();
+      }
+    });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="{% static "vendor/bootstrap.js" %}"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+  integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+  crossorigin="anonymous"
+></script>
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
+
+{% endblock script %}

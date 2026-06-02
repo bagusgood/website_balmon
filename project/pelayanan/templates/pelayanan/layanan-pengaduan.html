@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+<!-- prettier-ignore -->
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static "css/pelayanan.css" %}">
+<link rel="stylesheet" href="{% static "vendor/bootstrap.css" %}">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+<link href="https://db.onlinewebfonts.com/c/85969c0f53ef6a4eddee59ec6ebaaabd?family=Rosella+W01+Solid" rel="stylesheet">
+{% endblock style %}
+{% block content %}
+<div class="relative text-[#fff] ">
+  <img src="{% static "img/bg-layanan.png" %}" alt="" class="w-full h-[300px]
+  object-cover">
+  <div class="absolute bg-[#2577B4] w-full h-[300px] top-0 opacity-40"></div>
+  <h3 class="absolute lg:top-30 top-20 lg:text-start text-center lg:left-50">Penanganan Gangguan Penggunaan Spektrum Frekuensi Radio</h3>
+  <div class="lg:w-[40%] absolute lg:top-45 top-40 lg:left-90 left-10 bg-[#2577B4] text-center">
+    <p class="m-0 px-2 py-2">Balai Monitor Spektrum Frekuensi Radio Kelas II Mataram</p>
+  </div>
+</div>
+{% block title %}
+<div class="w-full h-[70px] bg-[#002846] flex items-center lg:pl-15 pl-3">
+  <ul class="flex text-[#fff] m-0 gap-3">
+    <li>Home</li>
+    <li>/</li>
+    <li>Profiles</li>
+    <li>/</li>
+    <li>{{title.3}}</li>
+  </ul>
+</div>
+{% endblock title %}
+
+<div id="layananPengaduan" class="bg-[#9ac2e5] py-5">
+  <div class="w-[80%] bg-[#fff] text-[#003c69] mx-auto pt-2 pb-4 rounded-lg">
+    <h1 class="m-0 pl-7 pb-3">PERSYARATAN</h1>
+    <div class="flex flex-col lg:gap-4 gap-3 text-justify pr-15">
+        <div class="flex lg:h-[50px] items-center gap-3 ">
+            <img src="{% static "img/aduan1.png" %}" alt="" class='lg:h-full h-[50px]'>
+            <p class="m-0">Surat/Laporan Pengaduan yang paling sedikit memuat: Nama pelapor, Nomor kontak pelapor, Alamat pelapor, Lokasi stasiun terganggu, Frekuensi terganggu, Sifat gangguan, Tanggal dan waktu terjadinya gangguan.</p>
+        </div>
+        <div class="flex lg:h-[50px] items-center gap-3 ">
+            <img src="{% static "img/aduan2.png" %}" alt="" class='lg:h-full h-[50px]'>
+            <p class="m-0">Dalam hal laporan pengaduan disampaikan oleh pengguna spektrum frekuensi radio yang memiliki Izin Stasiun Radio (ISR), wajib mencantumkan nomor/salinan ISR dari stasiun yang terganggu</p>
+        </div>
+        <div class="flex lg:h-[50px] items-center gap-3 ">
+            <img src="{% static "img/aduan3.png" %}" alt="" class='lg:h-full h-[50px]'>
+            <p class="m-0">Bukti dukung berupa foto, video dan/atau rekama suara atas gangguan atau dugaan sumber gangguan</p>
+        </div>
+    </div>
+  </div>
+  <div class="w-[80%] text-[#003c69] mx-auto pt-2 pb-4">
+    <h1 class="m-0 text-center pb-3 pt-4">MEKANISME</h1>
+    <div class="lg:flex lg:flex-row flex flex-col text-[#000] gap-5">
+        <div class="bg-[#c3dbf0] flex p-4 rounded-xl gap-1 text-justify flex-1 ">
+            <img src="{% static "img/orang.png" %}" alt="" class="w-[150px]">
+            <div class="">
+                <p class="m-0">Secara luring (offline):</p>
+                <ul class="list-disc">
+                    <li>Surat yang ditujukan kepada Kepala Balmon SFR Kelas II Mataram;</li>
+                    <li>Lounge/Loket pelayanan Balmon SFR Kelas II Mataram di Jl. Singosari Nomor 4 Mataram.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-[#c3dbf0] lg:flex p-4 rounded-xl gap-1 text-justify lg:flex-1">
+            <img src="{% static "img/daring.png" %}" alt="" class="w-[150px] lg:hidden flex lg:mx-0 mx-auto">
+            <div class="">
+                <p class="m-0">Secara daring (online):</p>
+                <ul class="list-disc">
+                    <li>Website <a href="https://laporgangguansfr.postel.go.id">https://laporgangguansfr.postel.go.id</a> </li>
+                    <li>Nomor telpon Balmon SFR Kelas II Mataram <a href="https://wa.me/+62370646411">(0370) 646411;</a></li>
+                    <li>WhatsApp <a href="https://wa.me/+6282266516166">(082266516166).</a></li>
+                </ul>
+            </div>
+            <img src="{% static "img/daring.png" %}" alt="" class="w-[150px] lg:flex hidden">
+        </div>
+    </div>
+    
+  </div>
+</div>
+
+{% endblock content %}
+{% block script %}
+<script>
+  const navLinks = document.querySelector(".nav-links");
+  function onToggleMenu(e) {
+    e.name = e.name === "menu-outline" ? "close-outline" : "menu-outline";
+    navLinks.classList.toggle("invisible");
+  }
+</script>
+
+<script>
+  const navLinks2 = document.querySelector(".nav-links2");
+  function onToggleMenu2(e) {
+    e.name == "menu-outline2"
+    navLinks2.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks3 = document.querySelector(".nav-links3");
+  function onToggleMenu3(e) {
+    e.name == "menu-outline3"
+    navLinks3.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks4 = document.querySelector(".nav-links4");
+  function onToggleMenu4(e) {
+    e.name == "menu-outline4"
+    navLinks4.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks5 = document.querySelector(".nav-links5");
+  function onToggleMenu5(e) {
+    e.name == "menu-outline5"
+    navLinks5.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks6 = document.querySelector(".nav-links6");
+  function onToggleMenu6(e) {
+    e.name == "menu-outline6"
+    navLinks6.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks7 = document.querySelector(".nav-links7");
+  function onToggleMenu7(e) {
+    e.name == "menu-outline7"
+    navLinks7.classList.toggle("hidden");
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="{% static "vendor/bootstrap.js" %}"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+  integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+  crossorigin="anonymous"
+></script>
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
+
+{% endblock script %}

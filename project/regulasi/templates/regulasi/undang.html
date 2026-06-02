@@ -1,0 +1,302 @@
+<!-- prettier-ignore -->
+
+{% extends "base.html" %} 
+{% load static %} 
+{% block style %} 
+  <link rel="stylesheet" href="{% static "css/regulasi.css" %}">
+  <link rel="stylesheet" href="{% static "vendor/bootstrap.css" %}">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
+{% endblock style %} {% block content %}
+
+<div id="regulasi" class="lg:h-screen w-full bg-cover bg-center">
+  <div class="relative lg:h-screen w-full bg-cover bg-center overflow-hidden">
+    <div id="bodyRegulasi" class="w-full h-[60%] bg-[rgba(0,60,105,0.5)] text-[#003c69] lg:flex">
+      <h1 class="poppins-bold pl-15">
+        UNDANG - <br />
+        UNDANG
+      </h1>
+      <div class="relative text-[#000]">
+        <img id="thumbnail-image" src="{% static "img/undang1.png" %}" alt="" class="h-[300px] mt-5 ml-25 mr-10 rounded-lg cursor-zoom-in">
+        <img src="{% static "img/klik-lihat.png" %}" alt="" class="absolute w-[300px] left-20 bottom-15">
+        <h4 class="absolute left-35 bottom-18">Klik Untuk Lihat</h4>
+      </div>
+      
+      <p class="lg:pt-20 text-justify lg:w-[33%] lg:mr-10 px-10 lg:text-white text-[#000] pt-3 m-0 pb-3">
+        <a href="https://peraturan.bpk.go.id/Details/38778/uu-no-36-tahun-2009" class="">Undang-Undang Nomor 36 Tahun 1999 tentang Telekomunikasi,</a> sebagaimana
+        telah diubah dengan Undang-Undang Nomor 6 Tahun 2023 tentang Penetapan
+        Peraturan Pemerintah Pengganti Undang-Undang Nomor 2 Tahun 2022 tentang
+        Cipta Kerja menjadi Undang-Undang.
+      </p>
+      <div
+        id="image-modal"
+        class="fixed hidden top-0 left-0 w-full h-full bg-black bg-opacity-75 z-50 flex items-center justify-center"
+      >
+        <div class="relative max-w-4xl max-h-[90vh]">
+          <button
+            id="close-modal"
+            class="absolute -top-10 right-0 text-white text-4xl hover:text-gray-300 cursor-pointer"
+          >
+            &times;
+          </button>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img id="modal-image" src="{% static "img/undang1.png" %}" alt=""
+                class="max-w-full max-h-[80vh] rounded-lg mx-auto">
+              </div>
+              <div class="swiper-slide">
+                <img id="modal-image" src="{% static "img/undang2.png" %}" alt=""
+                class="max-w-full max-h-[80vh] rounded-lg mx-auto">
+              </div>
+              <div class="swiper-slide">
+                <img id="modal-image" src="{% static "img/undang3.png" %}" alt=""
+                class="max-w-full max-h-[80vh] rounded-lg mx-auto">
+              </div>
+              <div class="swiper-slide">
+                <img id="modal-image" src="{% static "img/undang4.png" %}" alt=""
+                class="max-w-full max-h-[80vh] rounded-lg mx-auto">
+              </div>
+              <div class="swiper-slide">
+                <img id="modal-image" src="{% static "img/undang5.png" %}" alt=""
+                class="max-w-full max-h-[80vh] rounded-lg mx-auto">
+              </div>
+              <div class="swiper-slide">
+                <img id="modal-image" src="{% static "img/undang6.png" %}" alt=""
+                class="max-w-full max-h-[80vh] rounded-lg mx-auto">
+              </div>
+              <div class="swiper-slide">
+                <img id="modal-image" src="{% static "img/undang7.png" %}" alt=""
+                class="max-w-full max-h-[80vh] rounded-lg mx-auto">
+              </div>
+              <div class="swiper-slide">
+                <img id="modal-image" src="{% static "img/undang8.png" %}" alt=""
+                class="max-w-full max-h-[80vh] rounded-lg mx-auto">
+              </div>
+              <div class="swiper-slide">
+                <img id="modal-image" src="{% static "img/undang9.png" %}" alt=""
+                class="max-w-full max-h-[80vh] rounded-lg mx-auto">
+              </div>
+              <div class="swiper-slide">
+                <img id="modal-image" src="{% static "img/undang10.png" %}" alt=""
+                class="max-w-full max-h-[80vh] rounded-lg mx-auto">
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full lg:h-[40%] bg-[rgba(0,176,236,0.25)]">
+      <p class="lg:w-[50%] lg:ml-150 text-justify lg:pr-8 lg:py-15 py-3 px-10 mb-0">
+        Berikut merupakan dasar hukum yang digunakan dalam penegakan ketentuan
+        terkait penggunaan spektrum frekuensi radio serta perangkat
+        telekomunikasi. Regulasi di atas memuat undang-undang yang menjadi acuan
+        dalam pelaksanaan pengawasan, perizinan, sertifikasi perangkat, serta
+        pengenaan sanksi administratif atas pelanggaran yang terjadi. Untuk
+        informasi lebih lengkap, silakan klik regulasi tersebut.
+      </p>
+    </div>
+    <img src="{% static "img/menara.png" %}" alt="" class="h-screen absolute
+    top-25 left-10 lg:flex hidden">
+  </div>
+</div>
+<!-- <div class="">
+  <h1>doaiwjdoaw</h1>
+</div> -->
+
+{% endblock content %} {% block script %}
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Elemen-elemen yang diperlukan
+    const thumbnail = document.getElementById("thumbnail-image");
+    const modal = document.getElementById("image-modal");
+    const modalImage = document.getElementById("modal-image");
+    const closeModal = document.getElementById("close-modal");
+
+    // Fungsi untuk membuka modal
+    function openModal() {
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      document.body.style.overflow = "hidden"; // Mencegah scroll
+    }
+
+    // Fungsi untuk menutup modal
+    function closeModalFunc() {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      document.body.style.overflow = "auto"; // Mengembalikan scroll
+    }
+
+    // Event listener untuk thumbnail
+    thumbnail.addEventListener("click", openModal);
+
+    // Event listener untuk tombol close
+    closeModal.addEventListener("click", closeModalFunc);
+
+    // Tutup modal ketika klik di luar gambar
+    modal.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        closeModalFunc();
+      }
+    });
+
+    // Tutup modal dengan tombol Escape
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && !modal.classList.contains("hidden")) {
+        closeModalFunc();
+      }
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Elemen-elemen yang diperlukan
+    const thumbnail2 = document.getElementById("thumbnail-image2");
+    const modal2 = document.getElementById("image-modal2");
+    const modalImage2 = document.getElementById("modal-image2");
+    const closeModal2 = document.getElementById("close-modal2");
+
+    // Fungsi untuk membuka modal
+    function openModal2() {
+      modal2.classList.remove("hidden");
+      modal2.classList.add("flex");
+      document.body.style.overflow = "hidden"; // Mencegah scroll
+    }
+
+    // Fungsi untuk menutup modal
+    function closeModalFunc2() {
+      modal2.classList.add("hidden");
+      modal2.classList.remove("flex");
+      document.body.style.overflow = "auto"; // Mengembalikan scroll
+    }
+
+    // Event listener untuk thumbnail
+    thumbnail2.addEventListener("click", openModal2);
+
+    // Event listener untuk tombol close
+    closeModal2.addEventListener("click", closeModalFunc2);
+
+    // Tutup modal ketika klik di luar gambar
+    modal2.addEventListener("click", function (event) {
+      if (event.target === modal2) {
+        closeModalFunc2();
+      }
+    });
+
+    // Tutup modal dengan tombol Escape
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && !modal2.classList.contains("hidden")) {
+        closeModalFunc2();
+      }
+    });
+  });
+</script>
+
+<script>
+  const navLinks = document.querySelector(".nav-links");
+  function onToggleMenu(e) {
+    e.name = e.name === "menu-outline" ? "close-outline" : "menu-outline";
+    navLinks.classList.toggle("invisible");
+  }
+</script>
+
+<script>
+  const navLinks2 = document.querySelector(".nav-links2");
+  function onToggleMenu2(e) {
+    e.name == "menu-outline2"
+    navLinks2.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks3 = document.querySelector(".nav-links3");
+  function onToggleMenu3(e) {
+    e.name == "menu-outline3"
+    navLinks3.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks4 = document.querySelector(".nav-links4");
+  function onToggleMenu4(e) {
+    e.name == "menu-outline4"
+    navLinks4.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks5 = document.querySelector(".nav-links5");
+  function onToggleMenu5(e) {
+    e.name == "menu-outline5"
+    navLinks5.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks6 = document.querySelector(".nav-links6");
+  function onToggleMenu6(e) {
+    e.name == "menu-outline6"
+    navLinks6.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks7 = document.querySelector(".nav-links7");
+  function onToggleMenu7(e) {
+    e.name == "menu-outline7"
+    navLinks7.classList.toggle("hidden");
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="{% static "vendor/bootstrap.js" %}">
+<script
+  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+  integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+  crossorigin="anonymous"
+></script>
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
+
+
+{% endblock script %}

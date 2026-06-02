@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+<!-- prettier-ignore -->
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static "css/pelayanan.css" %}">
+<link rel="stylesheet" href="{% static "vendor/bootstrap.css" %}">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+<link href="https://db.onlinewebfonts.com/c/85969c0f53ef6a4eddee59ec6ebaaabd?family=Rosella+W01+Solid" rel="stylesheet">
+{% endblock style %}
+{% block content %}
+<div id="header" class="relative text-[#fff]">
+  <img src="{% static "img/bg-amatir.png" %}" alt="" class="w-full h-[300px]
+  object-cover">
+  <div class="absolute bg-[#2577B4] w-full h-[300px] top-0 opacity-50"></div>
+  <h1 class="absolute top-30 lg:left-95 left-15">Ujian Negara Amatir Radio</h1>
+</div>
+{% block title %}
+<div class="w-full h-[70px] bg-[#002846] flex items-center lg:pl-15 pl-8">
+  <ul class="flex text-[#fff] m-0 gap-3">
+    <li>Home</li>
+    <li>/</li>
+    <li>Profiles</li>
+    <li>/</li>
+    <li>{{title.2}}</li>
+  </ul>
+</div>
+{% endblock title %}
+
+<div id="ujianAmatir" class="bg-[#9ac2e5]">
+  <div class=" text-[#fff] pb-4">
+    <h1 class="text-center pt-4">PERSYARATAN</h1>
+    <div class="w-[80%] bg-[#c3dbf0] mx-auto lg:flex py-4 lg:px-5 px-4 gap-5 text-[#000] rounded-lg">
+      <div class="">
+        <img src="{% static "img/ujian-amatir.png" %}" alt="" class="lg:w-[300px] w-[200px] mx-auto">
+      </div>
+      <div class="">
+        <ul class="m-0 list-decimal text-justify lg:text-start">
+          <li>Registrasi akun e-Licensing pada website <a href="https://iar-ikrap.postel.go.id">https://iar-ikrap.postel.go.id</a></li>
+          <li>Pas foto terbaru dengan latar belakang warna merah</li>
+          <li>Foto atau scan KTP</li>
+          <li>Surat rekomendasi organisasi yang ditandatangani oleh salah satu dari pengurus organisasi daerah khusus untuk peserta UNAR kenaikan tingkat</li>
+          <li>Surat pernyataan tidak keberatan dari orang tua/wali atau keterangan kepala sekolah bagi yang belum berusia 17 Tahun</li>
+          <li>IAR yang masih berlaku khusus untuk peserta ujian kenaikan tingkat</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="text-[#fff] pb-5">
+    <h1 class="text-center m-0 pb-[8px]">MEKANISME</h1>
+    <div class="bg-[#fff] w-[80%] mx-auto text-[#000] rounded-lg px-5 py-4 text-justify">
+      <ul class="m-0 list-decimal p-0">
+        <li>Alur prosedur UNAR sesuai dengan diagram alur pada link dokumen perizinan Balmon SFR Kelas II Mataram Persyaratan Permohonan Perubahan data alamat Kantor dan StasiunSOP</li>
+        <li>UNAR diperuntukkan bagi Pemohon Izin Amatir Radio (IAR) baru (tingkat siaga) dan Pemohon Izin Amatir Radio (IAR) kenaikan tingkat (Tingkat Penggalang dan Penegak)</li>
+        <li>Permohonan untuk mengikuti UNAR dimaksud pada nomor 2 diajukan melalui sistem perizinan daring (online) pada website <a href="https://iar-ikrap.postel.go.id/">Persyaratan Permohonan Perubahan data alamat Kantor dan Stasiun</a></li>
+        <li>UNAR dilaksanakan secara Computer Assisted Test (CAT). Pemohon dapat memilih jadwal dan lokasi pelaksanaan UNAR</li>
+        <li>Permohonan peserta UNAR dilakukan verifikasi oleh panitia UNAR</li>
+        <li>Peserta UNAR yang telah memenuhi verifikasi akan diterbitkan kartu peserta UNAR</li>
+        <li>Peserta UNAR mengikuti penyelenggaraan UNAR sesuai dengan jadwal dan lokasi yang telah ditetapkan dengan membawa kartu peserta UNAR dan identitas diri yang masih berlaku</li>
+        <li>Nilai hasil kelulusan UNAR dapat dilihat pada aplikasi CAT dan diumumkan pada website e-Licensing</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+{% block script %}
+<script>
+  const navLinks = document.querySelector(".nav-links");
+  function onToggleMenu(e) {
+    e.name = e.name === "menu-outline" ? "close-outline" : "menu-outline";
+    navLinks.classList.toggle("invisible");
+  }
+</script>
+
+<script>
+  const navLinks2 = document.querySelector(".nav-links2");
+  function onToggleMenu2(e) {
+    e.name == "menu-outline2"
+    navLinks2.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks3 = document.querySelector(".nav-links3");
+  function onToggleMenu3(e) {
+    e.name == "menu-outline3"
+    navLinks3.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks4 = document.querySelector(".nav-links4");
+  function onToggleMenu4(e) {
+    e.name == "menu-outline4"
+    navLinks4.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks5 = document.querySelector(".nav-links5");
+  function onToggleMenu5(e) {
+    e.name == "menu-outline5"
+    navLinks5.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks6 = document.querySelector(".nav-links6");
+  function onToggleMenu6(e) {
+    e.name == "menu-outline6"
+    navLinks6.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks7 = document.querySelector(".nav-links7");
+  function onToggleMenu7(e) {
+    e.name == "menu-outline7"
+    navLinks7.classList.toggle("hidden");
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="{% static "vendor/bootstrap.js" %}"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+  integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+  crossorigin="anonymous"
+></script>
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
+
+{% endblock script %}

@@ -1,0 +1,382 @@
+{% extends "base.html" %} {% load static %} {% block style %} <link
+rel="stylesheet" href="{% static "css/style.css" %}"> <link rel="stylesheet"
+href="{% static "vendor/bootstrap.css" %}">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+{% endblock style %} {% block content %}
+<div class="swiper swiper2 w-full h-full">
+  <div class="swiper-wrapper">
+    {% for banner in gambar %}
+    <div class="swiper-slide">
+      <img src="{{banner.image.url}}" alt="" class="w-full h-[550px]" />
+    </div>
+    {% endfor %}
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</div>
+
+<div
+  id="tentang-kami"
+  class="bg-[#003c69] lg:flex lg:p-[80px] md:p-[80px] p-[50px]"
+>
+  <div class="logo lg:flex lg:items-center md:flex md:items-center">
+    <img src="{% static "img/kabalmon.png" %}" class=" w-[800px] ml-[-50px]">
+  </div>
+  <div class="text lg:my-auto text-[#00b0ec] ml-[-50px]">
+    <h1 class="text-[#00b0ec]">Sambutan Kepala</h1>
+    <h3 class="text-[#00b0ec]">
+      Balai Monitoring Spektrum Frekuensi Radio Kelas II Mataram
+    </h3>
+    {% comment %}
+    <div class="w-[20%] h-[5px] my-[20px] mx-auto"></div>
+    {% endcomment %}
+    <p class="text-justify mx-auto text-[#fff]">
+      Balmon SFR Kelas II Mataram merupakan Unit Pelaksana Teknis di lingkungan
+      Direktorat Jenderal Infrastruktur Digital (DJID), Kementerian Komunikasi
+      dan Digital, yang memiliki tugas melaksanakan pengawasan dan pengendalian
+      di bidang penggunaan spektrum frekuensi radio dan alat/perangkat
+      telekomunikasi di wilayah Nusa Tenggara Barat.
+    </p>
+  </div>
+</div>
+<div class="parallax">
+  <div class="opacity">
+    <h2>"ASN berAKHLAK"</h2>
+  </div>
+</div>
+<div id="infrastruktur" class="lg:p-[80px] p-[50px]">
+  <div class="infrastruktur-headline">
+    <h2 class="">MEDIA INFRASTRUKTUR DIGITAL</h2>
+    <div></div>
+  </div>
+  <div class="swiper mySwiper mt-4 swiper-card">
+    <div class="swiper-wrapper">
+      {% for post in postingan %}
+      <div class="swiper-slide bg-[#003c69] rounded-lg p-[20px] text-[#fff]">
+        <a href="/blog/artikel/{{post.slug}}">
+          <div class="overflow-hidden rounded-lg">
+            <img
+              src="{{post.image.url}}"
+              alt=""
+              class="h-[215px] w-full rounded-lg hover:scale-125 duration-300"
+            />
+          </div>
+        </a>
+        <a href="/blog/artikel/{{post.slug}}">
+          <h4 class="pt-[20px]">{{post.title}}</h4>
+        </a>
+        <p>{{post.tanggal}}</p>
+        <p class="h-[190px]  overflow-wrap text-justify ">{{post.body}}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="text-center mt-3">
+    <a href="/blog/artikel" class="">
+      <button
+        type="button"
+        class="text-[#ffffff] px-4 py-1.5 bg-[#00b5f1] rounded hover:bg-[#003c69] hover:text-[#00b5f1] duration-300 ease-in-out"
+      >
+        Cek Selengkapnya
+      </button>
+    </a>
+  </div>
+</div>
+<div id="link-terkait" class="bg-[#003c69] lg:p-[80px] p-[50px]">
+  <div class="text-[#fff]">
+    <h2 class="text-center">LINK TERKAIT</h2>
+    <div class="w-[10%] h-[5px] my-[10px] mx-auto bg-[#00b5f1] rounded"></div>
+  </div>
+  <div
+    class="grid lg:grid-cols-6 lg:grid-rows-4 lg:gap-4 md:grid-cols-6 md:grid-rows-4 md:gap-4 grid-cols-1 grid-rows-2 gap-6 pt-4"
+  >
+    <div
+      class="col-span-3 row-span-2 rounded-[20px] hover:scale-102 ease-in duration-300"
+    >
+      <a href="https://pelayanansdppi.postel.go.id/">
+        <img src="{% static "img/layanan.png" %}" alt="" class="w-[100%]
+        h-[100%] rounded-[20px]">
+      </a>
+    </div>
+    <div
+      class="col-span-3 row-span-2 rounded-[20px] hover:scale-102 ease-in duration-300"
+    >
+      <a href="https://sidia.postel.go.id/">
+        <img src="{% static "img/digital-asistant.png" %}" alt=""
+        class="w-[100%] h-[100%]" style="border-radius: 20px">
+      </a>
+    </div>
+    <div
+      class="col-span-3 row-span-2 rounded-[20px] hover:scale-102 ease-in duration-300"
+    >
+      <a href="https://www.postel.go.id/sdppi_maps/">
+        <img src="{% static "img/maps.png" %}" alt="" class="w-[100%] h-[100%]"
+        style="border-radius: 20px">
+      </a>
+    </div>
+    <div
+      class="col-span-3 row-span-2 rounded-[20px] hover:scale-102 ease-in duration-300"
+    >
+      <a href="https://ifasfest.id/">
+        <img src="{% static "img/kolaborasi.png" %}" alt="" class="w-[100%]
+        h-[100%]" style="border-radius: 20px">
+      </a>
+    </div>
+  </div>
+</div>
+<div id="publikasi" class="bg-[#00508c] lg:p-[80px] p-[50px]">
+  <div class="text-[#fff]">
+    <h2 class="text-center">PUBLIKASI</h2>
+    <div class="w-[10%] h-[5px] my-[10px] mx-auto bg-[#003c69] rounded"></div>
+  </div>
+  <div
+    class="product grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 grid-rows-2 gap-5 pt-4"
+  >
+    <div class="induk relative">
+      <div class="image-box rounded">
+        <a href="https://postel.go.id/publikasi-lakip-59">
+          <img src="{% static "img/kinerja.png" %}" alt="" width="100%"
+          height="100%" class="rounded hover:scale-102 ease-in duration-300">
+        </a>
+      </div>
+      <div class="relative lg:mt-2">
+        <div class="triangle absolute"></div>
+        <div class="product-name absolute w-full text-[#fff]">
+          <p class="bg-[#00b5f1] mt-3 px-2 py-1 text-center rounded">LAPKIN</p>
+        </div>
+      </div>
+    </div>
+    <div class="induk relative">
+      <div class="image-box rounded">
+        <a href="https://postel.go.id/publikasi-renstra-119">
+          <img src="{% static "img/tekno.png" %}" alt="" width="100%"
+          height="100%" class="rounded hover:scale-102 ease-in duration-300" >
+        </a>
+      </div>
+      <div class="relative lg:mt-2">
+        <div class="triangle absolute"></div>
+        <div class="product-name absolute w-full text-[#fff]">
+          <p class="bg-[#00b5f1] mt-3 px-2 py-1 text-center rounded">RENSTRA</p>
+        </div>
+      </div>
+    </div>
+    <div class="induk relative">
+      <div class="image-box rounded">
+        <a href="https://postel.go.id/publikasi-hasil-survei-pelayanan-publik-69">
+          <img src="{% static "img/survei.png" %}" alt="" width="100%"
+          height="100%" class="rounded hover:scale-102 ease-in duration-300" >
+        </a>
+      </div>
+      <div class="relative lg:mt-2">
+        <div class="triangle absolute"></div>
+        <div class="product-name absolute text-[#fff]">
+          <p class="bg-[#00b5f1] mt-3 px-2 py-1 text-center rounded">
+            HASIL SURVEI PELAYANAN PUBLIK
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="induk relative">
+      <div class="image-box rounded">
+        <a href="https://postel.go.id/publikasi-data-statistik-44">
+          <img src="{% static "img/statistik.png" %}" alt="" width="100%"
+          height="100%" class="rounded hover:scale-102 ease-in duration-300" >
+        </a>
+      </div>
+      <div class="relative lg:mt-2">
+        <div class="triangle absolute"></div>
+        <div class="product-name absolute w-full text-[#fff]">
+          <p class="bg-[#00b5f1] mt-3 px-2 py-1 text-center rounded">
+            DATA STATISTIK
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="induk relative lg:mt-3">
+      <div class="image-box rounded">
+        <a href="https://postel.go.id/publikasi-surat-edaran-46">
+          <img src="{% static "img/survei.png" %}" alt="" width="100%"
+          height="100%" class="rounded hover:scale-102 ease-in duration-300" >
+        </a>
+      </div>
+      <div class="relative lg:mt-2">
+        <div class="triangle absolute"></div>
+        <div class="product-name absolute w-full text-[#fff]">
+          <p class="bg-[#00b5f1] mt-3 px-2 py-1 text-center rounded">
+            SURAT EDARAN
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="induk relative lg:mt-3">
+      <div class="image-box rounded">
+        <a href="https://postel.go.id/publikasi-laporan-tahunan-45">
+          <img src="{% static "img/laptah.png" %}" alt="" width="100%"
+          height="100%" class="rounded hover:scale-102 ease-in duration-300" >
+        </a>
+      </div>
+      <div class="relative lg:mt-2">
+        <div class="triangle absolute"></div>
+        <div class="product-name absolute w-full text-[#fff]">
+          <p class="bg-[#00b5f1] mt-3 px-2 py-1 text-center rounded">
+            LAPORAN TAHUNAN
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="induk relative lg:mt-3">
+      <div class="image-box rounded">
+        <a href="https://postel.go.id/publikasi-lain-lain-35">
+          <img src="{% static "img/survei.png" %}" alt="" width="100%"
+          height="100%" class="rounded hover:scale-102 ease-in duration-300" >
+        </a>
+      </div>
+      <div class="relative lg:mt-2">
+        <div class="triangle absolute"></div>
+        <div class="product-name absolute w-full text-[#fff]">
+          <p class="bg-[#00b5f1] mt-3 px-2 py-1 text-center rounded">
+            LAIN-LAIN
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- prettier-ignore -->
+{% endblock content %} {% block script %}
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+  });
+</script>
+<script>
+  var swiper2 = new Swiper(".swiper2", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
+<script>
+  const navLinks = document.querySelector(".nav-links");
+  function onToggleMenu(e) {
+    e.name = e.name === "menu-outline" ? "close-outline" : "menu-outline";
+    navLinks.classList.toggle("invisible");
+  }
+</script>
+
+<script>
+  const navLinks2 = document.querySelector(".nav-links2");
+  function onToggleMenu2(e) {
+    e.name == "menu-outline2"
+    navLinks2.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks3 = document.querySelector(".nav-links3");
+  function onToggleMenu3(e) {
+    e.name == "menu-outline3"
+    navLinks3.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks4 = document.querySelector(".nav-links4");
+  function onToggleMenu4(e) {
+    e.name == "menu-outline4"
+    navLinks4.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks5 = document.querySelector(".nav-links5");
+  function onToggleMenu5(e) {
+    e.name == "menu-outline5"
+    navLinks5.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks6 = document.querySelector(".nav-links6");
+  function onToggleMenu6(e) {
+    e.name == "menu-outline6"
+    navLinks6.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  const navLinks7 = document.querySelector(".nav-links7");
+  function onToggleMenu7(e) {
+    e.name == "menu-outline7"
+    navLinks7.classList.toggle("hidden");
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="{% static "vendor/bootstrap.js" %}">
+<script
+  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+  integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+  crossorigin="anonymous"
+></script>
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
+
+{% endblock script %}
